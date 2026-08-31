@@ -40,7 +40,7 @@ in
 
     package = mkOption {
       type = types.package;
-      default = packages.${pkgs.system}.pass-profile;
+      default = packages.${pkgs.stdenv.hostPlatform.system}.pass-profile;
       description = "The pass-profile package to use.";
     };
 
